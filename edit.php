@@ -62,7 +62,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         <input type="password" name="password" placeholder="Masukkan Password Baru" required><br><br>
         
         <button type="submit">Simpan Perubahan</button>
-        <a href="dashboard.php">Batal</a>
+        <a href="dashboard.php"><button type="button">Batal</button></a>
     </form>
 </body>
 </html>

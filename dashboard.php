@@ -31,7 +31,7 @@ if ($_SESSION['nama'] == 'admin' && isset($_GET['delete_id'])) {
     <?php if ($_SESSION['nama'] == 'admin') : ?>
         <h3>Menu Admin: Kelola Pengguna</h3>
         <?php $result = $conn->query("SELECT id, nama FROM users"); ?>
-        <table border="1" cellpadding="10">
+        <table border="1" cellpadding="10" style="border-collapse: collapse;">
             <tr>
                 <th>ID</th>
                 <th>Nama</th>
@@ -42,8 +42,8 @@ if ($_SESSION['nama'] == 'admin' && isset($_GET['delete_id'])) {
                 <td><?php echo $row['id']; ?></td>
                 <td><?php echo $row['nama']; ?></td>
                 <td>
-                    <a href="edit.php?id=<?php echo $row['id']; ?>">Edit</a> | 
-                    <a href="dashboard.php?delete_id=<?php echo $row['id']; ?>" onclick="return confirm('Yakin ingin menghapus?')">Hapus</a>
+                    <a href="edit.php?id=<?php echo $row['id']; ?>"><button type="button">Edit</button></a>
+                    <a href="dashboard.php?delete_id=<?php echo $row['id']; ?>" onclick="return confirm('Yakin ingin menghapus?')"><button type="button">Hapus</button></a>
                 </td>
             </tr>
             <?php endwhile; ?>
